@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    background-image: url(images/banner.jpg);
+}
+.container {
+    border: 1px solid white;
+    width: 30%;
+    height: 700px;
+    margin: auto;
+    background-color:white;
+    padding: 10px;
+}
+
+input[type=text], input[type=password], input[type=confirmpassword] {
+    width: 100%;
+    padding: 20px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+
+}                           
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+.header-login{ 
+    width: 100%;
+    margin: auto;
+}
+.header-register{                         
+    width: 100%;
+    margin: auto;
+}
+
+

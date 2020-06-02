@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="login-singup.css" />
+</head>
+<body >  
+    <div class="container">
+        <h1>Log in</h1>
+        <p>Please fill in this form to create an account.</p>
+        <div class="container-header">
+
+            <div>
+                <b>Username :</b> 
+                <input placeholder="User Name" onkeyup="submit(event)" id="userName" type ="text">
+            </div>
+
+            <div>
+                <b>Password :</b> 
+                <input placeholder="Enter Password" onkeyup="submit(event)" id="passWord" type="passWord" >
+            </div>
+
+            <div id="remember">
+                <b>Remember :</b>
+                <input  type="checkbox" >
+            </div>
+
+            <div id="login">
+                <button onclick="login()">Log In</button>
+            </div>
+
+            <div>
+                <p>Don't have an account ? <a href="register.html" style="color:dodgerblue">Sign up</a>.</p>
+            </div>
+            
+        </div>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>
