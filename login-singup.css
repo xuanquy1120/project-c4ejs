@@ -14,7 +14,7 @@ body {
     padding: 10px;
 }
 
-input[type=text], input[type=password], input[type=confirmpassword] {
+input[type=text], input[type=password], input[type=confirmpassword],input[type=secretquestion] {
     width: 100%;
     padding: 20px;
     margin: 5px 0 22px 0;
@@ -30,14 +30,6 @@ button {
     border: none;
     cursor: pointer;
     width: 100%;
-}
-.header-login{ 
-    width: 100%;
-    margin: auto;
-}
-.header-register{                         
-    width: 100%;
-    margin: auto;
 }
 
 

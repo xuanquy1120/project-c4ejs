@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot</title>
+    <link rel="stylesheet" href="login-singup.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>Forgor Password</h1>
+        <p>Please fill in this form to create an account.</p>
+        <div class="container-header">
+            <div>
+                <b>Secret Question :</b> 
+                <input placeholder="secret question" onkeyup="submit(event)" id="secret" type="secretquestion">
+            </div>
+            <div>
+                <b>Password New:</b> 
+                <input placeholder="Enter Password New" onkeyup="submit(event)" id="passWord" type="passWord" >
+            </div>
+
+            <div>
+                <b>Confirm password New:</b> 
+                <input placeholder="Confirm Password New" onkeyup="submit(event)" id="conFirm" type="confirmpassword">
+            </div>
+
+            <div id="secret">
+                <button onclick="secret()">Secret</button>
+            </div> 
+        </div>
+    </div>
+    <script src="forgot.js"></script>
+</body>
+</html>
