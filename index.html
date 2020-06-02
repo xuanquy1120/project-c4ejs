@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+      <div class="container">
+        <div class="header">
+         <div class="user-icon"><img src="https://static.thenounproject.com/png/363639-200.png"   alt="" >
+         </div>
+        </div>
+        <div class="content">
+          <div class="row no-gutters">
+            <div class="col-sm-6 col-md-8">
+              <ul class="list">
+                <li class="item">
+                  chỗ này sẽ hiện nội dung
+
+                </li>
+              </ul>
+            </div>
+            <div class="col-6 col-md-4">
+              <ul class="group-item">
+                <li><p id="hvn"></p>
+                  <script>
+                    var today = new Date();
+                    var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+                    var dateTime = date;
+                  
+                    document.getElementById("hvn").innerHTML = dateTime;
+                 </script>
+                </li>
+                <li>
+                  <a href="#">Group</a>
+                </li>
+              </ul>
+              <div>
+                <form action="/cgi-bin/html5.cgi" method="get">
+                  name : <input type="text" name="name-todo" placeholder="Tên" required/><br>
+                  to-do : <input type="text" name="to-do" placeholder="Nội dung" required/><br>
+                  time start: <input type="datetime-local" id="time-start" ><br>
+                  time end: <input type="datetime-local" id="time-end" ><br>
+                  <br><input type="submit" value="submit" />
+               </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+</html>
