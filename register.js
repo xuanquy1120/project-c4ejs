@@ -4,26 +4,32 @@ function register() {
     let password = document.getElementById('passWord').value;
     let confirmPassword = document.getElementById('conFirm').value;
     let secret = document.getElementById('secret').value;
+    let existedUser = JSON.parse(localStorage.getItem("userNameDb"));
     const regex=new RegExp(/^\S+@\S+$/);
     if (!(username && password && secret)) {
         alert("Vui lòng điền đủ thông tin");
-        return
+        return;
     }
     else if (regex.test(userName)) {
         alert("Email không đúng định dạng");
-        return
+        return;
     }
     else if (password != confirmPassword) {
         alert("Xác nhận mật khẩu không đúng");
-        return
+        return;
+    }
+    else if (existedUser.some((user)=>{
+        return user.username==username;
+    })){
+        alert("Tên người dùng đã tồn tại. Vui lòng chọn tên khác");
+        return;
     }
     alert("Đăng kí thành công");
-    save(username, password);
+    save(existedUser,username, password);
     //chuyển về trang login
     window.location.href = "login.html";
 }
-function save(username, password) {
-    let existedUser = JSON.parse(localStorage.getItem("userNameDb"));
+function save(existedUser,username, password) {
     existedUser.push(
         {
             username: username
