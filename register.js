@@ -5,7 +5,7 @@ function register() {
     let confirmPassword = document.getElementById('conFirm').value;
     let secret = document.getElementById('secret').value;
     let existedUser = JSON.parse(localStorage.getItem("userNameDb"));
-    const regex=new RegExp(/^\S+@\S+$/);
+    const regex = new RegExp(/^\S+@\S+$/);
     if (!(username && password && secret)) {
         alert("Vui lòng điền đủ thông tin");
         return;
@@ -18,28 +18,37 @@ function register() {
         alert("Xác nhận mật khẩu không đúng");
         return;
     }
-    else if (existedUser.some((user)=>{
-        return user.username==username;
-    })){
+    else if (existedUser.some((user) => {
+        return user.username == username;
+    })) {
         alert("Tên người dùng đã tồn tại. Vui lòng chọn tên khác");
         return;
     }
     alert("Đăng kí thành công");
-    save(existedUser,username, password);
-    //chuyển về trang login
-    window.location.href = "login.html";
-}
-function save(existedUser,username, password) {
+    // save(existedUser,username, password);
     existedUser.push(
         {
             username: username
             , password: password
         }
     );
-    localStorage.setItem("existedUser",JSON.stringify(existedUser));
+    console.log(existedUser);
+    localStorage.setItem("userNameDb", JSON.stringify(existedUser));
+    //chuyển về trang login
+    window.location.href = "login.html";
 }
-function submit(e){
-    if(e.key=="Enter"){
-    register();        
+function save(existedUser, username, password) {
+    existedUser.push(
+        {
+            username: username
+            , password: password
+        }
+    );
+    console.log(existedUser);
+    localStorage.setItem("existedUser", JSON.stringify(existedUser));
+}
+function submit(e) {
+    if (e.key == "Enter") {
+        register();
     }
 }

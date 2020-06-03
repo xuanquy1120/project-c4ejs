@@ -3,14 +3,6 @@ let userNameDb = [
         username: "admin@gmail.com"
         , password: "123456"
     }
-    ,
-    {
-
-    }
-    ,
-    {
-
-    }
 ];
 let todoDB = [
     {
@@ -21,7 +13,6 @@ let todoDB = [
         , endTime: ""
     }
 ];
-
 let groupDb = [
     {
         groupID: ""
@@ -29,11 +20,15 @@ let groupDb = [
         , username: "admin@gmail.com"
     }
 ]
-localStorage.setItem("userNameDb", JSON.stringify(userNameDb));
-localStorage.setItem("todoDB", JSON.stringify(todoDB));
-localStorage.setItem("groupDb", JSON.stringify(groupDb));
-
-
+if (JSON.parse(localStorage.getItem("userNameDb")).length < 1) {
+    localStorage.setItem("userNameDb", JSON.stringify(userNameDb));
+}
+if (JSON.parse(localStorage.getItem("todoDB")).length < 1) {
+    localStorage.setItem("todoDB", JSON.stringify(todoDB));
+}
+if (JSON.parse(localStorage.getItem("groupDb")).length < 1) {
+    localStorage.setItem("groupDb", JSON.stringify(groupDb));
+}
 function login() {
     let username = document.getElementById('userName').value;
     let password = document.getElementById('passWord').value;
@@ -42,16 +37,16 @@ function login() {
         alert("Vui lòng điền đủ thông tin đăng nhập");
         return;
     }
-    let check = existedUser.some((user) => {
+    let isExisted = existedUser.some((user) => {
         return user.username == username && user.password == password;
     })
-    if (!check) {
+    if (!isExisted) {
         alert("Tên đăng nhập hoặc mật khẩu không đúng")
     }
     else {
         alert("Đăng nhập thành công");
         sessionStorage.setItem("currentUser", JSON.stringify(username));
-        window.location.href="/home.html";
+        window.location.href = "/home.html";
     }
 };
 
