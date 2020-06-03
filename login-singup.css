@@ -16,7 +16,7 @@ body {
   
 }
 
-input[type=text], input[type=password], input[type=confirmpassword],input[type=secretquestion] {
+input[type=text], input[type=password], input[type=confirmpassword],input[type=secretquestion],input[type=answer] {
     width: 100%;
     padding: 20px;
     margin: 5px 0 22px 0;
@@ -36,6 +36,11 @@ button {
     width: 100%;
     border: 2px solid white;
     border-radius: 12px;
+    opacity: 0.8;
 }
+button:hover {
+    opacity:1;
+  }
+  
 
 

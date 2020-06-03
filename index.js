@@ -3,9 +3,6 @@ function sumit(){
     const contentWork =document.getElementById("contentWork").value
     const timeStart =document.getElementById("timeStart").value
     const timeEnd =document.getElementById("timeEnd").value
-    
     let showToDo = document.getElementById('content-todo')
-    showToDo.innerHTML = `Name:${nameWork} Nôi dụng:${contentWork} Time Start${timeStart}-Time End${timeEnd}`
-    
-    
+    showToDo.innerHTML = `Name:${nameWork}  Nôi dụng:${contentWork} Time Start${timeStart}-Time End${timeEnd}`  
 };
