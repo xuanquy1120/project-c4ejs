@@ -46,7 +46,7 @@ function login() {
     else {
         alert("Đăng nhập thành công");
         sessionStorage.setItem("currentUser", JSON.stringify(username));
-        window.location.href = "/home.html";
+        window.location.href = "index.html";
     }
 };
 
