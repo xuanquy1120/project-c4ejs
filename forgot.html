@@ -8,31 +8,30 @@
 </head>
 <body>
     <div class="container">
-        <h1>Forgot Password</h1>
-        <p>Please fill in this form to create an account.</p>
+        <div class="container-introduce">
+           <center>
+            <h1>Quên mật khẩu</h1>
+            <p>vui lòng điền thông tin</p>
+           </center> 
+        </div>
         <div class="container-header">
             <div>
-                <b>Secret Question :</b> 
-                <input placeholder="Secret Question" onkeyup="submit(event)" id="secret" type="secretquestion">
+                <b>Tên tài khoản</b> 
+                <input placeholder="User Name" onkeyup="submit(event)" id="userName" type ="text">
             </div>
-
+    
             <div>
-                <b>Answer :</b> 
-                <input placeholder="Answer" onkeyup="submit(event)" id="answer" type="Answer">
-            </div>
-            
-            <div>
-                <b>Password New:</b> 
+                <b>Mật khẩu mới</b> 
                 <input placeholder="Enter Password New" onkeyup="submit(event)" id="passWord" type="passWord" >
             </div>
 
             <div>
-                <b>Confirm password New:</b> 
+                <b>Nhập lại mật khẩu</b> 
                 <input placeholder="Confirm Password New" onkeyup="submit(event)" id="conFirm" type="confirmpassword">
             </div>
 
             <div id="secret">
-                <button onclick="secret()">Secret</button>
+                <button onclick="submit()">Thay đổi</button>
             </div> 
         </div>
     </div>

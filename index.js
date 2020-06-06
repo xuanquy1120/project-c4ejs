@@ -4,5 +4,12 @@ function sumit(){
     const timeStart =document.getElementById("timeStart").value
     const timeEnd =document.getElementById("timeEnd").value
     let showToDo = document.getElementById('content-todo')
-    showToDo.innerHTML = `Name:${nameWork}  Nôi dụng:${contentWork} Time Start${timeStart}-Time End${timeEnd}`  
+    showToDo.innerHTML = `Name:${nameWork} Nôi dụng:${contentWork} Time Start${timeStart}-Time End${timeEnd}`   
 };
+function openForm() {
+    document.getElementById("myForm").style.display = "block";
+  }
+  
+  function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+  }
