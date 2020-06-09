@@ -6,8 +6,6 @@ function addGroup() {
         alert("Vui lòng điền đủ thông tin");
         return;
     }
-    
-    
     else if (existedGroup.some((user) => {
         return user.groupID === group;
     })) {
@@ -29,6 +27,3 @@ function submit(e) {
         addGroup();
     }
 }
-
-
-
