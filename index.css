@@ -1,36 +1,30 @@
 body {font-family: Arial, Helvetica, sans-serif;}
 * {box-sizing: border-box;}
 
-/* Button used to open the contact form - fixed at the bottom of the page */
-
-button {
+.open-button-add {
   background-color: #4CAF50;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  border: 2px solid white;
-  border-radius: 12px;
-  opacity: 0.8;
-  outline: none;
-} 
-.open-button {
-  background-color: #555;
   color: white;
   padding: 16px 20px;
   border: none;
   cursor: pointer;
   opacity: 0.8;
-  position: fixed;
   bottom: 23px;
   right: 28px;
-  width: 280px;
+  width: 100%;
+  border: 2px solid #4CAF50;
+  border-radius: 12px;
 }
-/* The popup form - hidden by default */
-.form-popup {
+.setting{
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px 15px;
+  opacity: 0.8;
+  width: 50%;
+  border: 2px solid #db4c3f;
+  border-radius: 12px;
+}
+.form-popup-add {
   display: none;
-  position: fixed;
   bottom: 0;
   right: 15px;
   border: 2px solid white;
@@ -38,18 +32,18 @@ button {
   z-index: 9;
 }
 
-/* Add styles to the form container */
-.form-container {
+
+.form-container-add {
   max-width: 300px;
   padding: 10px;
-  height: 700px;
-  background-color: white;
-  border: 2px solid white;
+  height: 100%;
+  background-color: whitesmoke;
+  border: 2px solid #4CAF50;
   border-radius: 12px;
 }
 
-/* Full-width input fields */
-.form-container input[type=text], input[type=datetime-local]  {
+
+.form-container-add input[type=text], input[type=datetime-local]  {
   width: 100%;
   padding: 15px;
   margin: 5px 0 22px 0;
@@ -59,14 +53,14 @@ button {
 }
 
 
-/* When the inputs get focus, do something */
-.form-container input[type=text]:focus,input[type=datetime-local]:focus  {
+
+.form-container-add input[type=text]:focus,input[type=datetime-local]:focus  {
   background-color: #ddd;
   outline: none;
 }
 
-/* Set a style for the submit/login button */
-.form-container .btn {
+
+.form-container-add .btn {
   background-color: #4CAF50;
   color: white;
   padding: 16px 20px;
@@ -77,36 +71,153 @@ button {
   opacity: 0.8;
 }
 
-/* Add a red background color to the cancel button */
-.form-container .cancel {
-  background-color: rgb(235, 74, 74);
+.form-container-add .cancel {
+  background-color: #4CAF50;
 }
-.form-container .submit {
+.form-container-add .submit {
   background-color: #4CAF50;
 }
 
-/* Add some hover effects to buttons */
-.form-container .btn:hover, .open-button:hover {
+.content-body{
+  
+  width: 100%;
+}
+.content-body p {
+  font-size: 15px;
+}
+.content-detail {
+  display: flex;
+}
+.content-detail-left {
+  flex: 1;
+  background-color: whitesmoke;
+  border: 1px solid whitesmoke;
+  height: 800px ;
+
+}
+.content-detail-right {
+  flex: 1;
+  height: 10px;
+}
+.content-detail-between {
+  flex: 7;
+ 
+}
+
+.content-body-1{
+  width: 100%;
+  background-color: #db4c3f ;
+}
+
+.content-body-1 p {
+  font-size: 20px;
+  
+}
+.content-detail-1 {
+  display: flex;
+}
+.content-detail-1-left {
+  flex: 2;
+  
+}
+.content-detail-1-right {
+  flex: 8;
+ 
+}
+.logout {
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px 15px;
+  opacity: 0.8;
+  width: 50%;
+  border: 2px solid #db4c3f;
+  border-radius: 12px;
+}
+.search {
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px 15px;
+  opacity: 0.8;
+  width: 20%;
+  border: 2px solid #db4c3f;
+  border-radius: 12px;
+  vertical-align: middle;
+}
+
+input[type=find] {
+  width: 60%;
+  padding: 12px 12px ;
+  margin: 20px;
+  border: 1px solid white;
+  border-radius: 12px;
+  background: #f1f1f1;
+  vertical-align: middle;
+}
+input[type=find]:focus{
+  background-color: #ddd;
+  outline: none
+}
+
+.form-container-add .btn:hover, .open-button:hover, .search:hover, .logout:hover,.setting:hover {
   opacity: 1;
 }
-.col-2{
-  border: 2px solid black;
-    border-radius: 12px;
-    width: 100%;
-    height: 1000px;
-    margin: auto;
-    background-color:white;
-    padding: 10px;
+
+.container-index{
+
+
+  padding: 0;
 }
+
 body {
-  background-image: url(images/banner.jpg); 
+  background-image: url(images/banner.jpg);
 }
-.container {
-  border: 2px solid white;
-  border-radius: 12px;
-  width: 100%;
-  height: auto;
-  margin: auto;
-  background-color:white;
-  padding: 10px;
+.clockdate-wrapper {
+  background-color:transparent;
+  padding:25px;
+  max-width:600px;
+  width:100%;
+  text-align:center;
+  border-radius:5px;
+  margin:0 auto;
+  margin-top:15%;
+}
+#clock{
+  background-color:transparent;
+  font-family: sans-serif;
+  font-size:40px;
+  text-shadow:0px 0px 1px black;
+  color:black;
+}
+#clock span {
+  color:black;
+  text-shadow:0px 0px 1px black;
+  font-size:20px;
+  position:relative;
+  top:-90px;
+  left:150px;
+}
+#date {
+  letter-spacing:1px;
+  font-weight: bold;
+  font: 20px;
+  font-family:arial,sans-serif;
+  color:black;
+  margin-top: -50px;
+  margin-left:50px ;
+}
+.user-icon {
+  align-self: left;
+  width: 70%;
+  height: 25%;
+  border-radius: 50%;
+}
+
+.group-item ul {
+  display: flex;
+}
+.item {
+  list-style: none;
+}
+ul li:hover {
+  background: #ddd;
 }

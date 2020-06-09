@@ -8,9 +8,12 @@ let todoDB = [
     {
         username: "admin@gmail.com"
         , name: "Ăn"
+        ,content:"abc"
         , groupID: ""
         , startTime: ""
         , endTime: ""
+        ,status:0
+        //0 là chưa hoàn thành 1 là done
     }
 ];
 let groupDb = [
@@ -20,13 +23,13 @@ let groupDb = [
         , username: "admin@gmail.com"
     }
 ]
-if (JSON.parse(localStorage.getItem("userNameDb")).length < 1) {
+if (!JSON.parse(localStorage.getItem("userNameDb"))||JSON.parse(localStorage.getItem("userNameDb")).length<1) {
     localStorage.setItem("userNameDb", JSON.stringify(userNameDb));
 }
-if (JSON.parse(localStorage.getItem("todoDB")).length < 1) {
+if (!JSON.parse(localStorage.getItem("todoDB"))||JSON.parse(localStorage.getItem("userNameDb")).length<1) {
     localStorage.setItem("todoDB", JSON.stringify(todoDB));
 }
-if (JSON.parse(localStorage.getItem("groupDb")).length < 1) {
+if (!JSON.parse(localStorage.getItem("groupDb"))||JSON.parse(localStorage.getItem("userNameDb")).length<1) {
     localStorage.setItem("groupDb", JSON.stringify(groupDb));
 }
 function login() {
@@ -44,7 +47,7 @@ function login() {
         alert("Tên đăng nhập hoặc mật khẩu không đúng")
     }
     else {
-        alert("Đăng nhập thành công");
+        alert(`Welcome back ${username}!`);
         sessionStorage.setItem("currentUser", JSON.stringify(username));
         window.location.href = "index.html";
     }

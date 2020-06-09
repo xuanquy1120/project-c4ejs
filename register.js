@@ -3,10 +3,10 @@ function register() {
     let username = document.getElementById('userName').value;
     let password = document.getElementById('passWord').value;
     let confirmPassword = document.getElementById('conFirm').value;
-    let secret = document.getElementById('secret').value;
+    // let secret = document.getElementById('secret').value;
     let existedUser = JSON.parse(localStorage.getItem("userNameDb"));
     const regex = new RegExp(/^\S+@\S+$/);
-    if (!(username && password && secret)) {
+    if (!(username && password)) {
         alert("Vui lòng điền đủ thông tin");
         return;
     }
@@ -25,7 +25,6 @@ function register() {
         return;
     }
     alert("Đăng kí thành công");
-    // save(existedUser,username, password);
     existedUser.push(
         {
             username: username
@@ -36,16 +35,6 @@ function register() {
     localStorage.setItem("userNameDb", JSON.stringify(existedUser));
     //chuyển về trang login
     window.location.href = "login.html";
-}
-function save(existedUser, username, password) {
-    existedUser.push(
-        {
-            username: username
-            , password: password
-        }
-    );
-    console.log(existedUser);
-    localStorage.setItem("existedUser", JSON.stringify(existedUser));
 }
 function submit(e) {
     if (e.key == "Enter") {
