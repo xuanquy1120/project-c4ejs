@@ -53,7 +53,7 @@
                     <div id="date"></div>
                   </div>
                   <a href="#">Group</a>
-                </div>    
+              </div>    
             </div>           
             <div class="content-detail-between" >
               <div class="content">
@@ -70,35 +70,33 @@
             </div>  
             <div class="content-detail-right">
               <button class="open-button-add" onclick="openForm()">Thêm</button>
-                <div class="form-popup-add" id="myForm" >
-                  <form  class="form-container-add" >
-              
+              <div class="form-popup-add" id="myForm" >
+                <form  class="form-container-add" >
                   <div>
-                      name : <input onkeyup="enter(event)" id="nameWork" type="text" name="name-todo" placeholder="Tên" /><br>
-                      to-do : <input onkeyup="enter(event)" id="contentWork" type="text" name="to-do" placeholder="Nội dung" /><br>
-                      From: <input onkeyup="enter(event)" id="timeStart" type="datetime-local" id="time-start" ><br>
-                      To: <input onkeyup="enter(event)" id="timeEnd" type="datetime-local" id="time-end" ><br> 
-                  </div>  
-                  <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Group</button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" style="color:dodgerblue" href="group.html">Thêm nhóm</a>
+                    name : <input onkeyup="enter(event)" id="nameWork" type="text" name="name-todo" placeholder="Tên" /><br>
+                    to-do : <input onkeyup="enter(event)" id="contentWork" type="text" name="to-do" placeholder="Nội dung" /><br>
+                    From: <input onkeyup="enter(event)" id="timeStart" type="datetime-local" id="time-start" ><br>
+                    To: <input onkeyup="enter(event)" id="timeEnd" type="datetime-local" id="time-end" ><br>  
+                    <div class="dropdown">
+                       <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Group</button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" href="#">Action</a>
+                          <a class="dropdown-item" href="#">Another action</a>
+                          <a class="dropdown-item" style="color:dodgerblue" href="group.html">Thêm nhóm</a>
+                        </div>
                     </div>
-                  </div>
                       <br><button type="button" class="btn btn-light" onclick="submit()">Submit</button>
                       <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-                  </form>
-                </div>
+                  </div>  
+              </form>
             </div>
           </div>
-          </div>
+        </div>
       </div>
-              
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    <script src="index.js"></script>
+    </div>          
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  <script src="index.js"></script>
 </body>
 </html>
