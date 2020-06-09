@@ -46,7 +46,6 @@ function search(e) {
     console.log("0");
     let currentUser = JSON.parse(sessionStorage.getItem("currentUser"));
     let searchTodo = document.getElementById("search").value;
-    
     let todoDB = JSON.parse(localStorage.getItem("todoDB"));
     todoDB.forEach((task) => {
       if (
@@ -59,35 +58,35 @@ function search(e) {
     });
   }
 }
-function submit() {
-    let currentUser = JSON.parse(sessionStorage.getItem("currentUser"));
-    let nameWork = document.getElementById("nameWork").value;
-    let contentWork = document.getElementById("contentWork").value;
-    let timeStart = document.getElementById("timeStart").value;
-    let timeEnd = document.getElementById("timeEnd").value;
-  //validate input
-  console.log(timeStart.replace("T", " "));
-  console.log(timeEnd.replace("T", " "));
-  if (!nameWork || !contentWork || !timeStart || !timeEnd) {
-    alert("Vui lòng nhập đủ thông tin");
-    return;
-  } else if (timeStart > timeEnd) {
-    alert("Invalid time");
-    return;
-  }
-  timeStart = timeStart.replace("T", " ");
-  timeEnd = timeEnd.replace("T", " ");
-  //validated input
-  let todoDB = JSON.parse(localStorage.getItem("todoDB"));
-  if (
-    todoDB.some((task) => {
-      return task.name == nameWork && task.username == currentUser;
-    })
-  ) {
-    alert("Todo đã tồn tại. Vui lòng nhập todo khác");
-    return;
-  }
-  addTodos(nameWork, contentWork, timeStart, timeEnd);
+function suBmit() {
+  let currentUser = JSON.parse(sessionStorage.getItem("currentUser"));
+  let nameWork = document.getElementById("nameWork").value;
+  let contentWork = document.getElementById("contentWork").value;
+  let timeStart = document.getElementById("timeStart").value;
+  let timeEnd = document.getElementById("timeEnd").value;
+//validate input
+console.log(timeStart.replace("T", " "));
+console.log(timeEnd.replace("T", " "));
+if (!nameWork || !contentWork || !timeStart || !timeEnd) {
+  alert("Vui lòng nhập đủ thông tin");
+  return;
+} else if (timeStart > timeEnd) {
+  alert("Invalid time");
+  return;
+}
+timeStart = timeStart.replace("T", " ");
+timeEnd = timeEnd.replace("T", " ");
+//validated input
+let todoDB = JSON.parse(localStorage.getItem("todoDB"));
+if (
+  todoDB.some((task) => {
+    return task.name == nameWork && task.username == currentUser;
+  })
+) {
+  alert("Todo đã tồn tại. Vui lòng nhập todo khác");
+  return;
+}
+addTodos(nameWork, contentWork, timeStart, timeEnd);
 }
 function enter(e) {
   if (e.key == "Enter") {
