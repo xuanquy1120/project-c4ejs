@@ -21,27 +21,30 @@
                         <center> 
                           <div ><img class="user-icon" src="images/jennie.jpg" width="50%"   alt="" ></div>
                         </center>
-                        <center> 
-                          <div class="dropdown">
-                            <button class="setting" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >cài đặt</button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <button class="dropdown-item" style="color:dodgerblue" href="group.html">Thay đổi avtar</a>
-                                <button class="dropdown-item" style="color:dodgerblue" class="btn btn-light"  onclick="logout()" id="log-out-btn">Logout</button>
-                            </div>
-                          </div>
-                        </center>
                       </td>
                     </tr>
                   </tbody>
                 </table>
               </div>
             </div>
-            <div class="content-detail-1-right">
-              <center>
-                <button class="search" id='search'>Tìm kiếm</button>
+            <div class="content-detail-1-between">
+              <center> 
+                <button class="search" >Find</button>
                 <input onkeyup="search(event)" class="col-sm-6 col-md-9" type="find" placeholder="Search todo" id='search'>
               </center>
-            </div>        
+            </div> 
+            <div class="content-detail-1-right">
+              <center> 
+                <div class="dropdown">
+                  <button class="setting" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >Setting</button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <button class="dropdown-item" style="color:dodgerblue" href="group.html">Avtar</a>
+                      <button class="dropdown-item" style="color:dodgerblue" class="btn btn-light"  onclick="logout()" id="log-out-btn">Logout</button>
+                  </div>
+                </div>
+              </center>
+            </div>
+            
           </div>
         </div>    
         <div class="content-body" >
@@ -61,7 +64,7 @@
                   <div class="col-sm-6 col-md-8">
                     <ul id='todoList' class="list">
                       <li class="item" id="content-todo">   
-                        Danh sách công việc
+                        TODOLIST
                       </li>
                     </ul>
                   </div>
@@ -69,7 +72,7 @@
               </div>
             </div>  
             <div class="content-detail-right">
-              <button class="open-button-add" onclick="openForm()">Thêm</button>
+              <button class="open-button-add" onclick="openForm()">ADD</button>
               <div class="form-popup-add" id="myForm" >
                 <form  class="form-container-add" >
                   <div>
@@ -80,9 +83,9 @@
                     <div class="dropdown">
                       <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Group</button>
                       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" style="color:dodgerblue" href="group.html">Thêm nhóm</a>
+                        <a class="dropdown-item"  href="#">Action</a>
+                        <a class="dropdown-item"  href="#">Another action</a>
+                        <a class="dropdown-item" style="color:dodgerblue" href="group.html">ADD group</a>
                       </div>
                     </div>
                       <button type="button" class="btn btn-light" onclick="suBmit()">Submit</button>

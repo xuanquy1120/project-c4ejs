@@ -18,11 +18,12 @@ body {font-family: Arial, Helvetica, sans-serif;}
 .setting{
   background-color: #4CAF50;
   color: white;
-  padding: 15px 15px;
+  padding: 10px 10px;
   opacity: 0.8;
   width: 50%;
   border: 2px solid #db4c3f;
   border-radius: 12px;
+  margin-top: 15px;
 }
 .form-popup-add {
   display: none;
@@ -81,7 +82,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 }
 
 .content-body{
-  
+  min-height: min-content;
   width: 100%;
 }
 .content-body p {
@@ -94,8 +95,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
   flex: 1;
   background-color: whitesmoke;
   border: 1px solid whitesmoke;
-  height: 800px ;
-
+  min-height: 800px;
 }
 .content-detail-right {
   flex: 1;
@@ -123,37 +123,31 @@ body {font-family: Arial, Helvetica, sans-serif;}
   
 }
 .content-detail-1-right {
-  flex: 8;
+  flex: 2;
  
 }
-.logout {
-  background-color: #4CAF50;
-  color: white;
-  padding: 15px 15px;
-  opacity: 0.8;
-  width: 50%;
-  border: 2px solid #db4c3f;
-  border-radius: 12px;
+.content-detail-1-between {
+  flex: 7;
 }
 .search {
   background-color: #4CAF50;
   color: white;
-  padding: 15px 15px;
+  padding: 10px 10px;
   opacity: 0.8;
   width: 20%;
   border: 2px solid #db4c3f;
   border-radius: 12px;
-  vertical-align: middle;
+  margin-top: auto;
 }
 
 input[type=find] {
   width: 60%;
-  padding: 12px 12px ;
+  padding: 8px 8px ;
   margin: 20px;
   border: 1px solid white;
   border-radius: 12px;
   background: #f1f1f1;
-  vertical-align: middle;
+ 
 }
 input[type=find]:focus{
   background-color: #ddd;
@@ -209,7 +203,7 @@ body {
 }
 .user-icon {
   align-self: left;
-  width: 70%;
+  width: 50%;
   height: 25%;
   border-radius: 50%;
 }

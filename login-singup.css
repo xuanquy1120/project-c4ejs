@@ -46,7 +46,17 @@ button {
 button:hover {
     opacity:1;
   }
-
-  
+#email-text>div{
+    font-size: 10px;
+    color: red;
+}             
+#password-text>div{
+    font-size: 10px;
+    color: red;
+}       
+#confirm-text>div{
+    font-size: 10px;
+    color: red;
+}
 
 

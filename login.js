@@ -7,7 +7,7 @@ let userNameDb = [
 let todoDB = [
     {
         username: "admin@gmail.com"
-        , name: "Ăn"
+        ,name: "Ăn"
         ,content:"abc"
         , groupID: ""
         , startTime: ""
@@ -16,7 +16,7 @@ let todoDB = [
         //0 là chưa hoàn thành 1 là done
     }
 ];
-let groupDb = [
+let groupDb  = [
     {
         groupID: ""
         , name: ""

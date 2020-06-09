@@ -10,6 +10,7 @@ function register() {
         alert("Vui lòng điền đủ thông tin");
         return;
     }
+    
     else if (regex.test(userName)) {
         alert("Email không đúng định dạng");
         return;

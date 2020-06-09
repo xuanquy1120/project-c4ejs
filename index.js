@@ -2,9 +2,22 @@ let currentUser = JSON.parse(sessionStorage.getItem("currentUser"));
 (showExistedTodos = () => {
   let todoDB = JSON.parse(localStorage.getItem("todoDB"));
   console.log(currentUser);
+  document.getElementById("todoList").innerHTML="";
   todoDB.forEach((task) => {
     if (task.username == currentUser) {
-      addTodos(task.name, task.content, task.startTime, task.endTime);
+      // addTodos(task.name, task.content, task.startTime, task.endTime);
+      document.getElementById("todoList").innerHTML+=`
+      <table class="table">
+<tbody id="t-${task.name}">
+  <tr>
+    <td id="0-${task.name}" class="col-9 col-md-2">${task.name} Nội dung: ${task.content} From: ${task.startTime} - To: ${task.endTime}</td>
+    <td class="col-3 col-md-2">
+    <button id="1-${task.name}" onclick=done(event) type="button" class="btn btn-success">Done</button>
+     <button id="2-${task.name}" onclick=edit(event) type="button" class="btn btn-warning">Edit</button>
+     <button id="3-${task.name}" onclick=hide(event) type="button" class="btn btn-danger">Delete</button></td>
+  </tr>
+</tbody>
+</table>`
     }
   });
 })();
@@ -64,6 +77,7 @@ function suBmit() {
   let contentWork = document.getElementById("contentWork").value;
   let timeStart = document.getElementById("timeStart").value;
   let timeEnd = document.getElementById("timeEnd").value;
+  
 //validate input
 console.log(timeStart.replace("T", " "));
 console.log(timeEnd.replace("T", " "));
@@ -90,7 +104,7 @@ addTodos(nameWork, contentWork, timeStart, timeEnd);
 }
 function enter(e) {
   if (e.key == "Enter") {
-    submit();
+    suBmit();
   }
 }
 function done(e) {
@@ -114,7 +128,11 @@ function hide(e) {
   todoDB.forEach((task) => {
     if (task.username == currentUser &&task.name==e.target.id.slice(2)) {
       console.log(document.getElementById(`t-${e.target.id.slice(2)}`))
+      console.log(todoDB.length);
     document.getElementById(`t-${e.target.id.slice(2)}`).innerHTML="";
+    todoDB.splice(todoDB.indexOf(task),1);
+    console.log(todoDB.length);
+    localStorage.setItem("todoDB",JSON.stringify(todoDB));
     return
     }
   });
