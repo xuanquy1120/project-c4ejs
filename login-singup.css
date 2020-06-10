@@ -58,5 +58,19 @@ button:hover {
     font-size: 10px;
     color: red;
 }
-
+.cancel {
+    background-color: #db4c3f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border: 2px solid white;
+    border-radius: 12px;
+    opacity: 0.8;
+    outline: none;
+}
+.cancel:hover {
+    opacity:1;
+} 
 
