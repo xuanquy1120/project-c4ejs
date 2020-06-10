@@ -183,10 +183,12 @@ document.getElementById("myForm").style.display = "none";
 let existedGroup = JSON.parse(localStorage.getItem("groupDb"));
 let grouplist = document.getElementById('group-list')
 let List = document.getElementById('list')
-for (let i = 1; i < existedGroup.length; i++) {
-    const element = existedGroup[i];
-    let html =`<option>${element.groupID}</option>`
-    grouplist.innerHTML +=html; 
-    List.innerHTML +=html
-}
 
+  for (let i = 1; i < existedGroup.length; i++) {
+      const element = existedGroup[i];
+      if(currentUser===element.username){
+      let html =`<option>${element.name}</option>`
+      grouplist.innerHTML +=html;
+      List.innerHTML +=html
+      }
+  }
