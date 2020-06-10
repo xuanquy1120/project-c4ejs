@@ -31,6 +31,6 @@ let existedGroup = JSON.parse(localStorage.getItem("groupDb"));
 let grouplist = document.getElementById('content-list')
 for (let i = 0; i < existedGroup.length; i++) {
     const element = existedGroup[i];
-    let html =`<option>${element.groupID}</option>`
+    let html =`<p>${element.groupID}</p>`
     grouplist.innerHTML +=html;
 }

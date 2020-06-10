@@ -217,3 +217,12 @@ body {
 ul li:hover {
   background: #ddd;
 }
+.groups{
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 10px;
+  opacity: 0.8;
+  width: 100%;
+  border: 2px solid #db4c3f;
+  border-radius: 12px;
+}
