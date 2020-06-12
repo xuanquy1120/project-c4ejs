@@ -2,6 +2,7 @@ let userNameDb = [
     {
         username: "admin@gmail.com"
         , password: "123456"
+        
     }
 ];
 let todoDB = [
@@ -23,6 +24,14 @@ let groupDb  = [
         , username: "admin@gmail.com"
     }
 ]
+
+let avatarDb  = [
+    {
+        img: "images/363639-200.png"
+        , username: "admin@gmail.com"
+    }
+]
+
 if (!JSON.parse(localStorage.getItem("userNameDb"))||JSON.parse(localStorage.getItem("userNameDb")).length<1) {
     localStorage.setItem("userNameDb", JSON.stringify(userNameDb));
 }
@@ -32,19 +41,52 @@ if (!JSON.parse(localStorage.getItem("todoDB"))||JSON.parse(localStorage.getItem
 if (!JSON.parse(localStorage.getItem("groupDb"))||JSON.parse(localStorage.getItem("userNameDb")).length<1) {
     localStorage.setItem("groupDb", JSON.stringify(groupDb));
 }
+if (!JSON.parse(localStorage.getItem("avatarDb"))||JSON.parse(localStorage.getItem("userNameDb")).length<1) {
+    localStorage.setItem("avatarDb", JSON.stringify(avatarDb));
+}
 function login() {
     let username = document.getElementById('userName').value;
     let password = document.getElementById('passWord').value;
     let existedUser = JSON.parse(localStorage.getItem("userNameDb"));
     if (!username || !password) {
-        alert("Vui lòng điền đủ thông tin đăng nhập");
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            onOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+        })
+    
+        Toast.fire({
+            icon: 'error',
+            title: 'Vui lòng điền đủ thông tin đăng nhập'
+        })
         return;
     }
     let isExisted = existedUser.some((user) => {
         return user.username == username && user.password == password;
     })
     if (!isExisted) {
-        alert("Tên đăng nhập hoặc mật khẩu không đúng")
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            onOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+        })
+    
+        Toast.fire({
+            icon: 'error',
+            title: 'Tên đăng nhập hoặc mật khẩu không đúng'
+        })
     }
     else {
         alert(`Welcome back ${username}!`);

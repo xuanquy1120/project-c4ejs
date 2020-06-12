@@ -192,3 +192,41 @@ let List = document.getElementById('list')
       List.innerHTML +=html
       }
   }
+  async function playAudio(sound){
+    await sound.play();
+    let popup = confirm("It's time");
+    if (popup == true) {
+    sound.pause();
+  }
+  }
+  function isTime() {
+    let todoDB = JSON.parse(localStorage.getItem("todoDB"));
+    let currentUser = JSON.parse(sessionStorage.getItem("currentUser"));
+    const now = new Date();
+    const audio = new Audio("sounds/alarm.mp3");
+    let y = now.getFullYear();
+    let m = now.getMonth() + 1;
+    let d = now.getDay() + 7;
+    let hr = now.getHours();
+    let min = now.getMinutes();
+    let sec = now.getSeconds();
+    let timeString = `${checkTime(y)}-${checkTime(m)}-${checkTime(d)} ${checkTime(
+      hr)}:${checkTime(min)}`;
+    console.log(timeString);
+    todoDB.forEach((task) => {
+      if (task.username == currentUser&&task.startTime == timeString && checkTime(sec) == 0) {
+        playAudio(audio);
+        }
+      }
+    );
+  }
+  setInterval(isTime, 1000);
+
+  let existedAvatar = JSON.parse(localStorage.getItem("avatarDb"));
+  let avtar = document.getElementById('avtar-img')
+    for (let i = 0; i < existedAvatar.length; i++) {
+        const element = existedAvatar[i];
+        if(currentUser===element.username){
+          document.getElementById('avtar-img').src = element.img;
+        }
+    }

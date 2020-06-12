@@ -5,13 +5,43 @@ function addGroup() {
     let existedGroup = JSON.parse(localStorage.getItem("groupDb"));
 
     if (!group ) {
-        alert("Vui lòng điền đủ thông tin");
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            onOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+        })
+    
+        Toast.fire({
+            icon: 'error',
+            title: 'Vui lòng điền thông tin'
+        })
         return;
     }
     else if (existedGroup.some((user) => {
         return user.name === group;
     })) {
-        alert("Tên đã tồn tại");
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            onOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+        })
+    
+        Toast.fire({
+            icon: 'error',
+            title: 'Group đã tồn tại'
+        })
         return;
     }
     alert("Đăng kí thành công");
@@ -39,4 +69,4 @@ let grouplist = document.getElementById('content-list')
         let html =`<p>${element.name}</p>`
         grouplist.innerHTML +=html;
         }
-    }
+}

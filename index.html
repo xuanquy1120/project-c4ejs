@@ -6,39 +6,27 @@
     <title>Home</title>
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="index.css">
-    <link rel="icon" type="image/png" href="images/banner.jpg"/>
 </head>
 <body onload="startTime()">
       <div class="container-index">
         <div class="content-body-1">
           <div class="content-detail-1">
+            
             <div class="content-detail-1-left">
-              <div class="header">
-                <table>
-                  <tbody>
-                    <tr>
-                      <td>
-                        <center> 
-                          <div ><img class="user-icon" src="images/jennie.jpg" width="50%"   alt="" ></div>
-                        </center>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+
             </div>
             <div class="content-detail-1-between">
-              <center> 
+
                 <button class="search" >Find</button>
                 <input onkeyup="search(event)" class="col-sm-6 col-md-9" type="find" placeholder="Search todo" id='search'>
-              </center>
+   
             </div> 
             <div class="content-detail-1-right">
               <center> 
                 <div class="dropdown">
                   <button class="setting" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >Setting</button>
                   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <button class="dropdown-item" style="color:dodgerblue" href="group.html">Avtar</a>
+                      <a class="dropdown-item" style="color:dodgerblue" onclick="avtar()" id="avtar" href="img.html" >Avtar</a>
                       <button class="dropdown-item" style="color:dodgerblue" class="btn btn-light"  onclick="logout()" id="log-out-btn">Logout</button>
                   </div>
                 </div>
@@ -50,6 +38,9 @@
         <div class="content-body" >
           <div class="content-detail">
             <div class="content-detail-left">  
+              <center> 
+                <div ><img class="user-icon" id="avtar-img" src="images/363639-200.png" width="50%"   alt="" ></div>
+              </center>
               <div id="clockdate" class="col-6 col-md-4">
                   <div class="clockdate-wrapper">
                     <div id="clock"></div>
@@ -66,7 +57,7 @@
                   <div class="col-sm-6 col-md-8">
                     <ul id='todoList' class="list">
                       <li class="item" id="content-todo">   
-                        TODOLIST
+                        
                       </li>
                     </ul>
                   </div>

@@ -7,22 +7,82 @@ function register() {
     let existedUser = JSON.parse(localStorage.getItem("userNameDb"));
     const regex = new RegExp(/^\S+@\S+$/);
     if (!(username && password)) {
-        alert("Vui lòng điền đủ thông tin");
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            onOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+        })
+    
+        Toast.fire({
+            icon: 'error',
+            title: 'Vui lòng điền đủ thông tin'
+        })
         return;
     }
     
     else if (regex.test(userName)) {
-        alert("Email không đúng định dạng");
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            onOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+        })
+    
+        Toast.fire({
+            icon: 'error',
+            title: 'Email không đúng định dạng'
+        })
         return;
     }
     else if (password != confirmPassword) {
-        alert("Xác nhận mật khẩu không đúng");
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            onOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+        })
+    
+        Toast.fire({
+            icon: 'error',
+            title: 'Xác nhận mật khẩu không đúng'
+        })
         return;
     }
     else if (existedUser.some((user) => {
         return user.username == username;
     })) {
-        alert("Tên người dùng đã tồn tại. Vui lòng chọn tên khác");
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            onOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+        })
+    
+        Toast.fire({
+            icon: 'error',
+            title: 'Tên người dùng đã tồn tại. Vui lòng chọn tên khác'
+        })
         return;
     }
     alert("Đăng kí thành công");
