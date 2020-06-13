@@ -9,7 +9,7 @@ function register() {
     if (!(username && password)) {
         const Toast = Swal.mixin({
             toast: true,
-            position: 'top-end',
+            position: 'top',
             showConfirmButton: false,
             timer: 3000,
             timerProgressBar: true,
@@ -29,7 +29,7 @@ function register() {
     else if (regex.test(userName)) {
         const Toast = Swal.mixin({
             toast: true,
-            position: 'top-end',
+            position: 'top',
             showConfirmButton: false,
             timer: 3000,
             timerProgressBar: true,
@@ -48,7 +48,7 @@ function register() {
     else if (password != confirmPassword) {
         const Toast = Swal.mixin({
             toast: true,
-            position: 'top-end',
+            position: 'top',
             showConfirmButton: false,
             timer: 3000,
             timerProgressBar: true,
@@ -69,7 +69,7 @@ function register() {
     })) {
         const Toast = Swal.mixin({
             toast: true,
-            position: 'top-end',
+            position: 'top',
             showConfirmButton: false,
             timer: 3000,
             timerProgressBar: true,

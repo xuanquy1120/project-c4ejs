@@ -2,47 +2,47 @@ body {font-family: Arial, Helvetica, sans-serif;}
 * {box-sizing: border-box;}
 
 .open-button-add {
-  background-color: #4CAF50;
+  background-color: #20c9cf;
   color: white;
-  padding: 16px 20px;
+  padding: 10px 10px;
   border: none;
   cursor: pointer;
   position: fixed;
   opacity: 0.8;
   bottom: 23px;
   right: 28px;
-  width: 10%;
-  border: 2px solid #4CAF50;
-  border-radius: 12px;
+  width: 8%;
+  border: 2px solid #20c9cf;
+  border-radius: 5px;
 }
 .setting{
-  background-color: #4CAF50;
+  background-color: #20c9cf;
   color: white;
-  padding: 10px 10px;
+  padding: 5px 5px;
   opacity: 0.8;
-  width: 50%;
-  border: 2px solid #db4c3f;
-  border-radius: 12px;
-  margin-top: 15px;
+  width: 42%;
+  border: 2px solid #20c9cf;
+  border-radius: 5px;
+  margin-top: 5px;
 }
 .form-popup-add {
   display: none;
   bottom: 0;
   right: 15px;
   border: 2px solid white;
-  border-radius: 12px;
+  border-radius: 5px;
   z-index: 9;
   position: fixed;
 }
 
 
 .form-container-add {
-  max-width: 300px;
+  max-width: 270px;
   padding: 10px;
   height: 100%;
   background-color: whitesmoke;
   border: 2px solid #4CAF50;
-  border-radius: 12px;
+  border-radius: 5px;
 }
 
 
@@ -51,7 +51,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
   padding: 15px;
   margin: 5px 0 22px 0;
   border: 2px solid white;
-  border-radius: 12px;
+  border-radius: 5px;
   background: #f1f1f1;
 }
 
@@ -92,24 +92,24 @@ body {font-family: Arial, Helvetica, sans-serif;}
   display: flex;
 }
 .content-detail-left {
-  flex: 2;
-  background-color: whitesmoke;
-  border: 1px solid whitesmoke;
-  min-height: 800px;
+  flex: 1;
+  border: 1px solid rgb(247, 239, 196);
+  min-height: 1000px;
+  background-color: rgb(247, 239, 196) ;
 }
 .content-detail-right {
-  flex: 2;
+  flex: 1;
   height: 10px;
 }
 .content-detail-between {
-  flex: 8;
+  flex: 9;
  
 }
 
 .content-body-1{
   width: 100%;
-  height: 70px;
-  background-color: #db4c3f ;
+  height: 49px;
+  background-color: rgb(250, 110, 67);
 }
 
 .content-body-1 p {
@@ -120,15 +120,14 @@ body {font-family: Arial, Helvetica, sans-serif;}
   display: flex;
 }
 .content-detail-1-left {
-  flex: 1;
-  
+  flex: 1 ;
 }
 .content-detail-1-between {
-  flex: 9;
+  flex: 8;
   
 }
 .content-detail-1-right {
-  flex: 2;
+  flex: 3;
  
 }
 
@@ -137,10 +136,10 @@ body {font-family: Arial, Helvetica, sans-serif;}
   color: white;
   padding: 5px 5px;
   opacity: 0.8;
-  width: 10%;
+  width: 11%;
   border: 2px solid #4CAF50;
-  border-radius: 12px;
-
+  border-radius: 5px;
+  margin-top: 5px;
 }
 
 input[type=find] {
@@ -148,8 +147,9 @@ input[type=find] {
   padding: 5px 5px ;
   margin: 20px;
   border: 1px solid white;
-  border-radius: 12px;
+  border-radius: 5px;
   background: #f1f1f1;
+  margin-top: 5px;
  
 }
 input[type=find]:focus{
@@ -157,18 +157,16 @@ input[type=find]:focus{
   outline: none
 }
 
-.form-container-add .btn:hover, .open-button:hover, .search:hover, .logout:hover,.setting:hover,.open-button-add:hover {
+.form-container-add .btn:hover, .open-button:hover, .search:hover, .logout:hover,.setting:hover,.open-button-add:hover,.comeBack:hover {
   opacity: 1;
 }
 
 .container-index{
-
-
   padding: 0;
 }
 
 body {
-  background-image: url(images/banner.jpg);
+  background-image: linear-gradient(rgb(190, 237, 245), rgb(139, 168, 201));
 }
 .clockdate-wrapper {
   background-color:transparent;
@@ -206,9 +204,10 @@ body {
 }
 .user-icon {
   align-self: left;
-  width: 50%;
+  width: 60%;
   height: 25%;
   border-radius: 50%;
+  border: 2px solid rgb(250, 110, 67);
 }
 
 .group-item ul {
@@ -221,11 +220,31 @@ ul li:hover {
   background: #ddd;
 }
 .groups{
-  background-color: #4CAF50;
+  background-color: rgb(250, 110, 67);
   color: white;
   padding: 10px 10px;
   opacity: 0.8;
+  width: 90%;
+  border: 2px solid rgb(250, 110, 67);
+  border-radius: 5px;
+}
+.musics{
+  background-color: rgb(250, 110, 67);
+  color: white;
+  padding: 10px 10px;
+  opacity: 0.8;
+  width: 90%;
+  border: 2px solid rgb(250, 110, 67);
+  border-radius: 5px;
+}
+.list{
   width: 100%;
-  border: 2px solid #4CAF50;
-  border-radius: 12px;
+}
+.comeBack{
+  background-color: #ceba08;
+  padding: 5px 5px;
+  opacity: 0.9;
+  width: 50%;
+  border: 2px solid #ceba08;
+  border-radius: 4px;
 }

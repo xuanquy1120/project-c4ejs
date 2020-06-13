@@ -7,7 +7,7 @@ function addGroup() {
     if (!group ) {
         const Toast = Swal.mixin({
             toast: true,
-            position: 'top-end',
+            position: 'top',
             showConfirmButton: false,
             timer: 3000,
             timerProgressBar: true,
@@ -24,11 +24,12 @@ function addGroup() {
         return;
     }
     else if (existedGroup.some((user) => {
-        return user.name === group;
+        currentUser==user.username&&
+        user.name == group;
     })) {
         const Toast = Swal.mixin({
             toast: true,
-            position: 'top-end',
+            position: 'top',
             showConfirmButton: false,
             timer: 3000,
             timerProgressBar: true,
@@ -48,7 +49,8 @@ function addGroup() {
     existedGroup.push(
         {
             username:currentUser,
-            name: group
+            name: group,
+            groupID: group
         }
     );
     console.log(existedGroup);

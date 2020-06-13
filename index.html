@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="./packet/sweetalert2.css">
 </head>
 <body onload="startTime()">
       <div class="container-index">
@@ -17,8 +18,8 @@
             </div>
             <div class="content-detail-1-between">
 
-                <button class="search" >Find</button>
-                <input onkeyup="search(event)" class="col-sm-6 col-md-9" type="find" placeholder="Search todo" id='search'>
+                <button class="search" onclick="find()" >Find</button>
+                <input onkeyup="search(event)" class="col-sm-6 col-md-9" type="find" placeholder="Search todo: name" id='search'>
    
             </div> 
             <div class="content-detail-1-right">
@@ -46,15 +47,28 @@
                     <div id="clock"></div>
                     <div id="date"></div>
                   </div >
-                </div>    
-                <select  class="btn groups" id="list">
-                  <option value="">--Please choose a group--</option>
-                </select>
+                </div>  
+                  <center>
+                    <select  id="background-music" class="musics" >
+                      <option  value="" >Choose your sounds:</option>
+                      <option  value="ocean">Ocean</option>
+                      <option value="rain">Rain</option>
+                    </select>
+                  </center>
+                <br>  
+                <center>
+          
+                <div class="dropdown">
+                  <button class="btn groups" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >list group</button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="list">
+                  </div>
+                </div>
+              </center>
             </div>           
             <div class="content-detail-between" >
               <div class="content">
                 <div class="row no-gutters">
-                  <div class="col-sm-6 col-md-8">
+                  <div class="col-sm-6 col-md-11">
                     <ul id='todoList' class="list">
                       <li class="item" id="content-todo">   
                         
@@ -73,9 +87,12 @@
                     to-do : <input onkeyup="enter(event)" id="contentWork" type="text" name="to-do" placeholder="Nội dung" /><br>
                     From: <input onkeyup="enter(event)" id="timeStart" type="datetime-local" id="time-start" ><br>
                     To: <input onkeyup="enter(event)" id="timeEnd" type="datetime-local" id="time-end" ><br>  
-                    <select  class="btn group" id="group-list">
-                      <option value="">--Please choose a group--</option>
-                    </select>
+      
+                    <div class="dropdown">
+                      <button class="btn group" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >choose group</button>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="group-list">
+                      </div>
+                    </div>
                     <a class="btn add" type="button"  href="group.html">ADD group</a>
                       <button type="button" class="btn btn-light" onclick="suBmit()">Submit</button>
                       <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
@@ -90,5 +107,6 @@
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
   <script src="index.js"></script>
+  <script src="./packet/sweetalert2.all.min.js"></script>
 </body>
 </html>

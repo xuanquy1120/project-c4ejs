@@ -31,6 +31,13 @@ let avatarDb  = [
         , username: "admin@gmail.com"
     }
 ]
+let groupName  = [
+    {
+        namegroup: ""
+        , nametodo: ""
+        , username: "admin@gmail.com"
+    }
+]
 
 if (!JSON.parse(localStorage.getItem("userNameDb"))||JSON.parse(localStorage.getItem("userNameDb")).length<1) {
     localStorage.setItem("userNameDb", JSON.stringify(userNameDb));
@@ -44,6 +51,9 @@ if (!JSON.parse(localStorage.getItem("groupDb"))||JSON.parse(localStorage.getIte
 if (!JSON.parse(localStorage.getItem("avatarDb"))||JSON.parse(localStorage.getItem("userNameDb")).length<1) {
     localStorage.setItem("avatarDb", JSON.stringify(avatarDb));
 }
+if (!JSON.parse(localStorage.getItem("groupName"))||JSON.parse(localStorage.getItem("userNameDb")).length<1) {
+    localStorage.setItem("groupName", JSON.stringify(groupName));
+}
 function login() {
     let username = document.getElementById('userName').value;
     let password = document.getElementById('passWord').value;
@@ -51,7 +61,7 @@ function login() {
     if (!username || !password) {
         const Toast = Swal.mixin({
             toast: true,
-            position: 'top-end',
+            position: 'top',
             showConfirmButton: false,
             timer: 3000,
             timerProgressBar: true,
@@ -73,7 +83,7 @@ function login() {
     if (!isExisted) {
         const Toast = Swal.mixin({
             toast: true,
-            position: 'top-end',
+            position: 'top',
             showConfirmButton: false,
             timer: 3000,
             timerProgressBar: true,
