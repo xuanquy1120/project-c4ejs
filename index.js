@@ -295,7 +295,7 @@ let List = document.getElementById('list')
     })
     async function backGroundMusic(e){
       let sound=new Audio("sounds/171.mp3");
-    console.log(playing `${e.target.value}`)
+    console.log(`playing ${e.target.value}`)
     if (e.target.value=='rain'){
       await setInterval(function(){
         sound.play()

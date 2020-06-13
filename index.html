@@ -47,23 +47,20 @@
                     <div id="clock"></div>
                     <div id="date"></div>
                   </div >
-                </div>  
-                  <center>
-                    <select  id="background-music" class="musics" >
-                      <option  value="" >Choose your sounds:</option>
-                      <option  value="ocean">Ocean</option>
-                      <option value="rain">Rain</option>
-                    </select>
-                  </center>
+                </div> 
+                <center>
+                  <select id="background-music" class="musics">
+                    <option  value="" >Choose your sounds:</option>
+                    <option value="Ocean">Ocean</option>
+                    <option value="rain">Rain</option>
+                  </select>
+                </center>
                 <br>  
                 <center>
-          
-                <div class="dropdown">
-                  <button class="btn groups" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >list group</button>
-                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="list">
-                  </div>
+                <div class="musics">
+                  <a  style="color:white" href="index.html">stop music</a>
                 </div>
-              </center>
+                </center>
             </div>           
             <div class="content-detail-between" >
               <div class="content">
@@ -86,13 +83,7 @@
                     name : <input onkeyup="enter(event)" id="nameWork" type="text" name="name-todo" placeholder="Tên" /><br>
                     to-do : <input onkeyup="enter(event)" id="contentWork" type="text" name="to-do" placeholder="Nội dung" /><br>
                     From: <input onkeyup="enter(event)" id="timeStart" type="datetime-local" id="time-start" ><br>
-                    To: <input onkeyup="enter(event)" id="timeEnd" type="datetime-local" id="time-end" ><br>  
-      
-                    <div class="dropdown">
-                      <button class="btn group" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >choose group</button>
-                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="group-list">
-                      </div>
-                    </div>
+                    To: <input onkeyup="enter(event)" id="timeEnd" type="datetime-local" id="time-end" ><br> 
                     <a class="btn add" type="button"  href="group.html">ADD group</a>
                       <button type="button" class="btn btn-light" onclick="suBmit()">Submit</button>
                       <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
